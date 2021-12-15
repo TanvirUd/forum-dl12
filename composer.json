@@ -1,0 +1,17 @@
+{
+    "name": "squalli/forum",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Squalli",
+            "email": "virgile.gibello@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Manager\\": "src/model/Manager/",
+            "App\\Entity\\": "src/model/Entity/"
+        }
+    }
+}
