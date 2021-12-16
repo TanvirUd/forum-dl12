@@ -1,4 +1,6 @@
-<?php 
+<?php
+define("SECRET_WORD", "Something");
+
 define("DEFAULT_CTRL", "topic");
 define("DEFAULT_METHOD", "index");
 

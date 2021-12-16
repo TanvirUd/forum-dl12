@@ -39,7 +39,7 @@ class User extends AbstractEntity
      */ 
     public function getRole()
     {
-        return $this->role;
+        return $this->role ?? "ROLE_USER";
     }
 
     /**

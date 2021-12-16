@@ -26,6 +26,7 @@
     </p>
     <p>
         <input type="submit" value="Inscription">
+        <input type="hidden" name="csrf_token" value="<?= $token ?>">
     </p>
 </form>
 <div class="redirentRegister">

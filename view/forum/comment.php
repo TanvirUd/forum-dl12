@@ -30,6 +30,7 @@
                 <a href="?ctrl=security&action=login">Please login to post</a>
             <?php } else { ?>
                 <input type="submit" value="Submit">
+                <input type="hidden" name="csrf_token" value="<?= $token ?>">
             <?php }?>
         </p>
     </form>

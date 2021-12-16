@@ -32,4 +32,25 @@ abstract class Router
         }
         return false;
     }
+
+    public static function generateToken()
+    {
+        if(!Session::get("csrf_key")){
+            Session::set("csrf_key", bin2hex(random_bytes(32)));
+        }
+        return hash_hmac("sha256", SECRET_WORD, Session::get("csrf_key"));
+    }
+
+    public static function CSRFProtection($token)
+    {
+        if(Form::isSubmitted()){
+            $form_token = Form::getData("csrf_token", "text");
+            if(!$form_token || !hash_equals($token, $form_token)){  
+                Session::invalidate();
+                Session::set("message", ["type" => "error", 'msg' => "Invalid CSRF Token !"]);
+                header("Location: index.php");
+                die;
+            }
+        }
+    }
 }

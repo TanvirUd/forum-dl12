@@ -13,6 +13,7 @@
     </p>
     <p>
         <input type="submit" value="Connexion">
+        <input type="hidden" name="csrf_token" value="<?= $token ?>">
     </p>
 </form>
 <div class="redirentRegister">

@@ -6,6 +6,10 @@ session_start();
 
 use App\Service\Router;//FQCN - Fully Qualified Class Name
 
+$token = Router::generateToken();
+
+Router::CSRFProtection($token);
+
 $response = Router::handleRequest();
 if($response !== false):
     $page = $response["view"];
