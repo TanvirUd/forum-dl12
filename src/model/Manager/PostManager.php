@@ -11,7 +11,7 @@ class PostManager extends AbstractManager implements ManagerInterface
     public function findAll()
     {
         return $this::getResults(
-            "App\\Entity\\Product",
+            "App\\Entity\\Post",
             "SELECT * FROM post"
         );
     }

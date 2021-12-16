@@ -35,4 +35,9 @@ class AdminController extends AbstractController
             "user" => $users
         ]);
     }
+
+    public function addCategory()
+    {
+        
+    }
 }
